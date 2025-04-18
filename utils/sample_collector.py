@@ -67,7 +67,7 @@ def generate_samples_and_download_images(
         point = ee.Geometry.Point([lon, lat])
         image = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED") \
             .filterBounds(point) \
-            .filterDate('2023-01-01', '2023-12-31') \
+            .filterDate('2024-01-01', '2024-12-31') \
             .sort('CLOUD_COVER') \
             .first()
         region = point.buffer(buffer_meters).bounds()
